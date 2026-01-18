@@ -20,8 +20,11 @@ Additionally, two extensions are included to study the efficacy of LSTM:
 - Libraries: `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `torch`
 
 ## Setup Instructions
-1. Download the dataset from Kaggle and unzip `archive.zip` into the root folder.
-2. Run the Jupyter Notebook. Model weights are saved as `.pth` files after training.
+1. Open the notebook in Google Colab  
+   [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/woopakyi/Madrid-Air-Quality-Forecasting/blob/main/notebook.ipynb)
+2. Select GPU runtime (T4 recommended)
+3. Download the dataset `archive.zip` from [Kaggle](https://www.kaggle.com/datasets/decide-soluciones/air-quality-madrid) and place the ZIP file in the root folder.
+4. Run the notebook. Model weights are saved as `.pth` files after training.
 
 ## Results
 - **Core Model Performance**: Best model (e.g., LSTM) achieves low MSE on test data. Comparative study shows LSTM outperforming RNN in capturing long-term dependencies, with GRU offering a balance in speed and efficiency.
@@ -30,7 +33,7 @@ Additionally, two extensions are included to study the efficacy of LSTM:
 - **Extra Feature 1: Temporal Patterns**: Seasonal decomposition reveals periodic trends, such as higher NO₂ in winter due to traffic and heating, and elevated O₃ in summer from photochemical reactions.
 ![Daily Forecast](images/ex1_forecast.png)
 - **Extra Feature 2: Spatial Clustering**: KMeans identifies 3 clusters (high NO₂ urban/traffic, high O₃ suburban, balanced mixed/industrial). DBSCAN detects outliers like unique industrial stations, highlighting spatial differences in pollution sources (e.g., central city vs. outskirts).
-![Clusters of Stations](images/ex2_clusters.png)
+![Clusters of Stations](images/ex2_all.png)
 
 ## Acknowledgments
 Dataset: [Kaggle - Air Quality in Madrid](https://www.kaggle.com/datasets/decide-soluciones/air-quality-madrid)
